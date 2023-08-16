@@ -29,61 +29,7 @@
         <button class="btn" type="submit">Отправить</button>
         <p class="result"></p>
     </form>
-    <script>
-        
-        const email = document.querySelector('.input__email')
-        const password = document.getElementById('input__password')
-        const password2 = document.getElementById('input__password2')
-        const btn = document.querySelector('.btn')
-        const result = document.querySelector('.result')
+    <script src="script.js"></script>
 
-
-        btn.addEventListener('click', () => {
-            if(email.value.indexOf('@') != -1 && password.value === '12345678' && password.value === password2.value && password.value.length >= 8 ) {
-                result.innerHTML = 'Форма отправлена'
-                result.classList.add('green')
-            } else if (!(email.value.indexOf('@') != -1)) {
-                result.innerHTML = 'Нет @'
-                result.classList.add('red')
-            } else if (!(password.value === '12345678')) {
-                result.innerHTML = 'Неверный пароль'
-                result.classList.add('red')
-            } else if (!(password.value === password2.value)) {
-                result.innerHTML = 'Пароли не совпадают'
-                result.classList.add('red')
-            } else if (!(password.value.length >= 8)) {
-                result.innerHTML = 'Пароль короче 8 символов'
-                result.classList.add('red')
-            }
-            console.log(password.value === password2.value)
-            console.log(password.value === '12345678')
-        })
-
-    </script>
-
-    <!-- <form id="form" name="form" method="post" > 
-        <label >username : 
-    <input name="username" id="username" type="text" /></label> <br>
-        <label >password : 
-    <input name="password" id="password" type="password" /></label>     
-        <label>confirm password:
-    <input type="password" name="confirm_password" id="confirm_password" />
-        </label>
-    <label>
-      <input type="submit" name="submit"  value="registration"  />
-    </label> -->
-<!-- 
-    <script>
-        console.log(document.getElementById('confirm_password').value)
-        var check = function() {
-  if (document.getElementById('password').value ==
-    document.getElementById('confirm_password').value) {
-    document.getElementById('message').style.color = 'green';
-    document.getElementById('message').innerHTML = 'matching';
-  } else {
-    document.getElementById('message').style.color = 'red';
-    document.getElementById('message').innerHTML = 'not matching';
-  }}
-    </script> -->
 </body>
 </html>
