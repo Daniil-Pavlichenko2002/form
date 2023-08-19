@@ -30,9 +30,5 @@ btn.addEventListener('click', () => {
     } else if (!(password.value === password2.value)) {
         result.innerHTML = 'Пароли не совпадают'
         result.classList.add('red')
-    } else if (!(password.value.length >= 8)) {
-        result.innerHTML = 'Пароль короче 8 символов'
-        result.classList.add('red')
     }
-    
 })
